@@ -159,7 +159,7 @@ def get_file(filename):
 def main_page():
     if request.method == 'POST':
         file = request.files['file']
-        type = request['type']
+        # type = request['type']
         print(type)
         filename = secure_filename(file.filename)
         file.save(filename, type)
